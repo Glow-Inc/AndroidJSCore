@@ -373,7 +373,7 @@ public class JSContext extends JSObject {
 
     private static void static_init() {
         if (!isInit) {
-            System.loadLibrary("javascriptcoregtk-4.0");
+            System.loadLibrary("jsc");
             System.loadLibrary("android-js-core");
             staticInit();
             isInit = true;

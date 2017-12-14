@@ -7,3 +7,5 @@ obj
 project.properties
 build/
 *~
+.idea
+.externalNativeBuild

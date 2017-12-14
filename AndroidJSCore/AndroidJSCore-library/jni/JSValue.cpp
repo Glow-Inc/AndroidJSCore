@@ -68,16 +68,6 @@ NATIVE(JSValue,jboolean,isObject) (PARAMS, jlong ctxRef, jlong valueRef)
     return (jboolean) JSValueIsObject((JSContextRef)ctxRef, (JSValueRef)valueRef);
 }
 
-NATIVE(JSValue,jboolean,isArray) (PARAMS, jlong ctxRef, jlong valueRef)
-{
-    return (jboolean) JSValueIsArray((JSContextRef)ctxRef, (JSValueRef)valueRef);
-}
-
-NATIVE(JSValue,jboolean,isDate) (PARAMS, jlong ctxRef, jlong valueRef)
-{
-    return (jboolean) JSValueIsDate((JSContextRef)ctxRef, (JSValueRef)valueRef);
-}
-
 /* Comparing values */
 
 NATIVE(JSValue,jobject,isEqual) (PARAMS, jlong ctxRef, jlong a, jlong b)

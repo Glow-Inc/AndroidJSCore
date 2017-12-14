@@ -33,8 +33,8 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE    := javascriptcore
-LOCAL_SRC_FILES := lib/$(TARGET_ARCH_ABI)/libjavascriptcoregtk-4.0.so
+LOCAL_MODULE    := jsc
+LOCAL_SRC_FILES := ../build/intermediates/exploded-aar/org.webkit/android-jsc/r174650/jni/$(TARGET_ARCH_ABI)/libjsc.so
 include $(PREBUILT_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -47,7 +47,7 @@ LOCAL_SRC_FILES := JSContext.cpp \
                    Instance.cpp \
                    JSFunction.cpp
 
-LOCAL_SHARED_LIBRARIES := javascriptcore
+LOCAL_SHARED_LIBRARIES := jsc
 
 LOCAL_CPPFLAGS  := -std=c++11 -fexceptions -I$(LOCAL_PATH)/include
 LOCAL_LDFLAGS := -llog
