@@ -70,30 +70,6 @@ artifacts {
     archives javadocJar
 }
 
-def getRepositoryUrl() {
-    return GLOW_MAVEN
-}
-
-def getRepositoryUsername() {
-    return USERNAME
-}
-
-def getRepositoryPassword() {
-    return PASSWORD
-}
-
-uploadArchives {
-    repositories.mavenDeployer {
-        repository(url: getRepositoryUrl()) {
-            authentication(
-                    userName: getRepositoryUsername(),
-                    password: getRepositoryPassword())
-
-        }
-    }
-}
-
-
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.glow.android'
