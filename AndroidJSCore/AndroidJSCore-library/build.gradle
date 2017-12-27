@@ -97,4 +97,4 @@ uploadArchives {
 apply plugin: 'com.github.dcendents.android-maven'
 
 group='com.glow.android'
-version = '1.0'
+version = '1.1'
